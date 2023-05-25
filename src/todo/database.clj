@@ -1,5 +1,7 @@
 (ns todo.database
-    (require [korma.db :as korma]))
+    (require 
+    [korma.db :as korma]
+    [dotenv :refer [env app-env]]))
 
 (def db-connection-info
     (korma/mysql 
@@ -7,7 +9,7 @@
         :subprotocol "mysql"
         :user "root"
         :subname "//localhost:3306/menagerie"
-        :password "password"}))
+        :password (env "PASS")}))
 
 ; set up korma
 (korma/defdb db db-connection-info)

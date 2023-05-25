@@ -9,7 +9,8 @@
                  [ring/ring-json "0.5.1"]
                  [korma "0.5.0-RC1"]
                  [mysql/mysql-connector-java "5.1.6"]
-                 [ring/ring-defaults "0.3.4"]]
+                 [ring/ring-defaults "0.3.4"]
+                 [lynxeyes/dotenv "1.1.0"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler todo.handler/app}
   :profiles
